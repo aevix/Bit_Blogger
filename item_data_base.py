@@ -6,33 +6,26 @@ def create_connection(db_file):
     conn=None
     try:
         conn = sqlite3.connect(db_file)
-        return conn
-
+        
     except Error as e:
         print(e)
+    
+    return conn
 
 
 def create_table(conn, statement):
 
-    try:
-        c = conn.cursor()
-        c.execute(statement)
-    except Error as e:
-        print(e)
+    sql = ''' INSERT INTO PROJECTS(id, category, size, inorout) VALUES(?,?,?,?) '''
+    
+    c = conn.cursor()
+    c.execute(statement)
+    return c.lastrowid
 
 def main():
     database = r"pythonsqlite.db"
-
-    sql_item_tracker = """CREATE TABLE IF NOT EXISTS item_tracking(
-        id integer PRIMARY KEY,
-        category text NOT NULL,
-        size text,
-        inorout text NOT NULL
-
-    ); """
     conn = create_connection(database)
-    if conn is not None:
-        create_table(conn, sql_item_tracker)
+    with conn:
+        item = ()
     else:
         print("Error! Cannot create the database connection!")
 
