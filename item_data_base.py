@@ -14,20 +14,24 @@ def create_connection(db_file):
 
 
 def create_table(conn, statement):
-
-    sql = ''' INSERT INTO PROJECTS(id, category, size, inorout) VALUES(?,?,?,?) '''
-    
+    """
+    Create a new project into the projects table
+    :param conn:
+    :param project:
+    :return: project id
+    """
+    sql = ''' INSERT INTO projects(item_id, type , size, yn)
+              VALUES(?,?,?,?) '''
     c = conn.cursor()
-    c.execute(statement)
+    c.execute(sql, statement)
     return c.lastrowid
 
 def main():
     database = r"pythonsqlite.db"
     conn = create_connection(database)
     with conn:
-        item = ()
-    else:
-        print("Error! Cannot create the database connection!")
+        item = (4548156548, 'suit', 'large', 'y')
+        item_id = create_table(conn,item)
 
 if __name__ == '__main__':
     main()
