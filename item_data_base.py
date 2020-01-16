@@ -80,10 +80,7 @@ def main():
     conn = create_connection(database)
 
     with conn:
-        print("Query printed by id")
-        select_by_id(conn, 4546456)
-        print("Query printed all")
-        select_all(conn)
+        insert_data(conn, (890809, 'boot', 'large', False))
 
 
 if __name__ == '__main__':
