@@ -78,9 +78,11 @@ def select_by_id(conn,id):
 def main():
     database = r"C:\Users\April\Documents\GitHub\item_tracker\pythonsqlite.db"
     conn = create_connection(database)
+    
 
     with conn:
         insert_data(conn, (890809, 'boot', 'large', False))
+
 
 
 if __name__ == '__main__':

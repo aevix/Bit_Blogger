@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Item tracker</title>
+<h1>K70 laboratory garment tracker</h1>
+
+
+{% endblock %}
+
+{% block body %}
+
+<label for='barcode'>Barcode: </label>
+<input id="barcode" name="barcode" type="text">
+<br>
+<label for="type">Type of garment: </label>
+<input id="type" name="type" type="text">
+<br>
+<section class="size">
+    <label for="size">Size of suit: </label>
+    <select name="size" id="size">
+      <option value="xsmall">xSmall</option>
+      <option value="small">Small</option>
+      <option value="medium">Medium</option>
+      <option value="large">Large</option>
+      <option value="xlarge">xLarge</option>
+      <option value="xxlarge">xxLarge</option>
+      <option value="3xlarge">3xLarge</option>
+      <option value="4xlarge">4xLarge</option>
+    </select>
+</section>
+<br>
+<input id='enter' type="submit">
+<nav>
+    <ul>
+        <li>Search</li>
+        <li>Enter New Item</li>
+        <li>Incoming/Outgoing Item</li>
+        <li>Leave a Note for an Item</li>
+    </ul>
+</nav>
+
+{% endblock %}
+
+{% block footer %}
+
+<p>Contact ykim@gw-semi.com for any item_tracker related issue</p>
+
+{% endblock %}
+
