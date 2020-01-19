@@ -10,18 +10,28 @@
 
 {% block body %}
 <form>
-    <label for='barcode'>Barcode: </label>
-    <input id="barcode" name="barcode" type="text">
-    <br>
-    <input value='Search' type="submit">
+    <div align="center">
+        <label for='barcode'>Barcode: </label>
+        <input id="barcode" name="barcode" type="text">
+        <br>
+        <input value='Search' type="submit">
+        <table id="info">
+            <thead>
+                <tr>
+                    <td>Barcode</td>
+                    <td>Suite Type</td>
+                    <td>Size</td>
+                </tr>
+            </thead>
+        </table>
 
-    <ul>
-        <li>Search</li>
-        <li>Enter New Item</li>
-        <li>Incoming/Outgoing Item</li>
-        <li>Leave a Note for an Item</li>
-    </ul>
-
+        <ul>
+            <li>Search</li>
+            <li>Enter New Item</li>
+            <li>Incoming/Outgoing Item</li>
+            <li>Leave a Note for an Item</li>
+        </ul>
+    </div>
 </form>
 
 {% endblock %}
