@@ -1,32 +1,23 @@
-from flask import Flask, render_template, url_for, request
-import item_data_base
+from flask import Flask, render_template, url_for
+from flask_sqlalchemy import SQLAlchemy
+from datetime import datetime
 
-app=Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI']='pythonsqlite.db'
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI']="sqlite:///test.db"
+db=SQLAlchemy(app)
 
+class Todo(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    content = db.Column(db.String(200), nullable=False)
+    date_create = db.Column(db.DateTime, default =datetime.utcnow)
 
-def create_connection(db_file):
-    conn=None
-    try:
-        conn = sqlite3.connect(db_file)
-        
-    except Error as e:
-        print(e)
+    def __repr__(self):
+        return '<Task %r>' % self.id
 
-    return conn
-
-@app.route('/', methods =['GET'])
-def select_by_id(conn,id):
-    database = r"pythonsqlite.db"
-
-    conn = create_connection(database)
-    
-    sql = 'select * from projects where id =?'
-    cur = conn.cursor()
-    cur.execute(sql, (id,))
-    rows = cur.fetchall()
-    for row in rows:
-        print(row)
+@app.route('/')
+def index():
+    return render_template('item_UI.html')
 
 if __name__=="__main__":
     app.run(debug=True)
+    db.create_all()

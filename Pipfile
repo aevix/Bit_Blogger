@@ -8,6 +8,7 @@ pylint = "*"
 
 [packages]
 flask = "*"
+pywebview = "*"
 
 [requires]
 python_version = "3.7"

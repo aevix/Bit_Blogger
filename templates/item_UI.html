@@ -3,14 +3,15 @@
 {% block head %}
 
 <title>Item tracker</title>
-<h1>K70 laboratory garment tracker</h1>
-
+<div align="center">
+    <h1>K70 laboratory garment tracker</h1>
+</div>
 
 {% endblock %}
 
 {% block body %}
 <form>
-    <div align="center">
+    <div>
         <label for='barcode'>Barcode: </label>
         <input id="barcode" name="barcode" type="text">
         <br>
@@ -21,6 +22,7 @@
                     <td>Barcode</td>
                     <td>Suite Type</td>
                     <td>Size</td>
+                    <td>Outgoing</td>
                 </tr>
             </thead>
         </table>
@@ -37,8 +39,8 @@
 {% endblock %}
 
 {% block footer %}
-
-<p>Contact ykim@gw-semi.com for any item_tracker related issue</p>
-
+<div>
+    <p>Contact ykim@gw-semi.com for any item_tracker related issue</p>
+</div>
 {% endblock %}
 
