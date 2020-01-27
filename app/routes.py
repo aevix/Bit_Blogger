@@ -1,8 +1,11 @@
 from flask import render_template, flash, redirect, url_for, request
 <<<<<<< HEAD
+<<<<<<< HEAD
 from app import app, db
 from app.forms import EditProfileForm, LoginForm, RegistrationForm
 =======
+=======
+>>>>>>> parent of 350731f... fix registration bug
 from app import app
 from app.forms import LoginForm, RegistrationForm
 >>>>>>> parent of 350731f... fix registration bug
