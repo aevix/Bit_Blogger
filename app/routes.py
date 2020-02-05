@@ -11,7 +11,7 @@ from datetime import datetime
 @app.route('/index')
 @login_required
 def index():
-    user = {'username': 'admin'}
+    user = current_user.username
     posts = [
         {
             'author': {'username':'Yuhyun'},

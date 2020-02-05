@@ -1,0 +1,86 @@
+2020-02-04 02:16:50,190 ERROR: Exception on /index [GET] [in c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\routes.py", line 19, in index
+    return render_template('index.html',title='Home', posts=posts)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\index.html", line 14, in root
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\base.html", line 54, in root
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\index.html", line 30, in block_content
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\_post.html", line 12, in root
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'avatar'
+2020-02-04 02:17:23,110 ERROR: Exception on /index [GET] [in c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py:1891]
+Traceback (most recent call last):
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
+    return func(*args, **kwargs)
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\routes.py", line 19, in index
+    return render_template('index.html',title='Home', posts=posts)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\templating.py", line 140, in render_template
+    ctx.app,
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\templating.py", line 120, in _render
+    rv = template.render(context)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\asyncsupport.py", line 76, in render
+    return original_render(self, *args, **kwargs)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\environment.py", line 1008, in render
+    return self.environment.handle_exception(exc_info, True)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\environment.py", line 780, in handle_exception
+    reraise(exc_type, exc_value, tb)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\_compat.py", line 37, in reraise
+    raise value.with_traceback(tb)
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\environment.py", line 1005, in render
+    return concat(self.root_render_func(self.new_context(vars)))
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\index.html", line 14, in root
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\base.html", line 54, in root
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\index.html", line 30, in block_content
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\templates\_post.html", line 12, in root
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\runtime.py", line 262, in call
+    return __obj(*args, **kwargs)
+  File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\runtime.py", line 630, in _fail_with_undefined_error
+    raise self._undefined_exception(hint)
+jinja2.exceptions.UndefinedError: 'str object' has no attribute 'avatar'
