@@ -1,4 +1,5 @@
-2020-02-04 02:16:50,190 ERROR: Exception on /index [GET] [in c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py:1891]
+2020-02-03 23:17:55,967 INFO: Microblog startup [in C:\Users\April\Documents\GitHub\item_tracker\app\__init__.py:44]
+2020-02-03 23:18:42,616 ERROR: Exception on / [GET] [in c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -14,7 +15,7 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\April\Documents\GitHub\item_tracker\app\routes.py", line 19, in index
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\routes.py", line 25, in index
     return render_template('index.html',title='Home', posts=posts)
   File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
@@ -40,8 +41,8 @@ Traceback (most recent call last):
     return __obj(*args, **kwargs)
   File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\runtime.py", line 630, in _fail_with_undefined_error
     raise self._undefined_exception(hint)
-jinja2.exceptions.UndefinedError: 'str object' has no attribute 'avatar'
-2020-02-04 02:17:23,110 ERROR: Exception on /index [GET] [in c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py:1891]
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'avatar'
+2020-02-03 23:18:51,264 ERROR: Exception on /index [GET] [in c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py:1891]
 Traceback (most recent call last):
   File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\app.py", line 2446, in wsgi_app
     response = self.full_dispatch_request()
@@ -57,7 +58,7 @@ Traceback (most recent call last):
     return self.view_functions[rule.endpoint](**req.view_args)
   File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask_login\utils.py", line 261, in decorated_view
     return func(*args, **kwargs)
-  File "C:\Users\April\Documents\GitHub\item_tracker\app\routes.py", line 19, in index
+  File "C:\Users\April\Documents\GitHub\item_tracker\app\routes.py", line 25, in index
     return render_template('index.html',title='Home', posts=posts)
   File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\flask\templating.py", line 140, in render_template
     ctx.app,
@@ -83,7 +84,4 @@ Traceback (most recent call last):
     return __obj(*args, **kwargs)
   File "c:\users\april\documents\flask\item_tracker\venv\lib\site-packages\jinja2\runtime.py", line 630, in _fail_with_undefined_error
     raise self._undefined_exception(hint)
-jinja2.exceptions.UndefinedError: 'str object' has no attribute 'avatar'
-2020-02-11 04:59:46,680 INFO: Microblog startup [in C:\Users\April\Documents\GitHub\item_tracker\app\__init__.py:44]
-2020-02-12 03:43:40,749 INFO: Microblog startup [in C:\Users\April\Documents\GitHub\item_tracker\app\__init__.py:44]
-2020-02-12 03:49:54,074 INFO: Microblog startup [in C:\Users\April\Documents\GitHub\item_tracker\app\__init__.py:44]
+jinja2.exceptions.UndefinedError: 'dict object' has no attribute 'avatar'
